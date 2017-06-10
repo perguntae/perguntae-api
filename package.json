@@ -1,0 +1,44 @@
+{
+  "name": "perguntae-api",
+  "version": "0.0.1",
+  "description": "The Perguntaê project base API",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "babel-node ./lib/index.js",
+    "test": "mocha --compilers js:babel-register",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- -R spec --bail --recursive --compilers js:babel-register",
+    "coveralls": "npm run coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "build": "babel lib -d dist",
+    "serve": "node ./dist/index.js"
+  },
+  "author": "Helder Traci <helderdiin.work@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-runtime": "^6.23.0",
+    "body-parser": "~1.17.1",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "morgan": "~1.8.1",
+    "pm2": "^2.4.5"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "chai": "^3.5.0",
+    "coveralls": "^2.13.0",
+    "istanbul": "^1.0.0-alpha",
+    "mocha": "^3.2.0",
+    "mocha-lcov-reporter": "^1.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/perguntae/perguntae-api.git"
+  }
+}
