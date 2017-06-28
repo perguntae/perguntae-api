@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "babel-node ./lib/index.js",
+    "start:debug": "babel-node --inspect ./lib/index.js",
     "test": "mocha --compilers js:babel-register",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- -R spec --bail --recursive --compilers js:babel-register",
     "coveralls": "npm run coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
