@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "babel-node ./lib/index.js",
+    "start:debug": "babel-node --inspect ./lib/index.js",
     "test": "mocha --compilers js:babel-register",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- -R spec --bail --recursive --compilers js:babel-register",
     "coveralls": "npm run coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
@@ -19,8 +20,11 @@
     "body-parser": "~1.17.1",
     "debug": "~2.6.3",
     "express": "~4.15.2",
+    "mongoose": "^4.10.5",
     "morgan": "~1.8.1",
-    "pm2": "^2.4.5"
+    "pm2": "^2.4.5",
+    "rethinkdb": "^2.3.3",
+    "shorthash": "0.0.2"
   },
   "keywords": [],
   "devDependencies": {
