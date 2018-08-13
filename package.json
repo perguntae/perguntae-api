@@ -17,11 +17,11 @@
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "babel-runtime": "^6.23.0",
-    "body-parser": "~1.17.1",
+    "body-parser": "^1.18.3",
     "debug": "~2.6.3",
-    "express": "~4.15.2",
+    "express": "^4.16.3",
     "mongoose": "^4.10.5",
-    "morgan": "~1.8.1",
+    "morgan": "^1.9.0",
     "pm2": "^2.4.5",
     "rethinkdb": "^2.3.3",
     "shorthash": "0.0.2"
