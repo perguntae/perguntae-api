@@ -7,6 +7,7 @@
     "start": "babel-node ./lib/index.js",
     "start:debug": "babel-node --inspect ./lib/index.js",
     "test": "mocha --compilers js:babel-register",
+    "apidoc": "apidoc -i lib/ -o apidoc/ -e node_modules/",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- -R spec --bail --recursive --compilers js:babel-register",
     "coveralls": "npm run coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "build": "babel lib -d dist",
@@ -46,5 +47,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/perguntae/perguntae-api.git"
+  },
+  "apidoc": {
+    "title": "Custom apiDoc browser title",
+    "url" : "https://github.com/perguntae/perguntae-api"
   }
 }
