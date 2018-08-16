@@ -1,0 +1,110 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Perguntae",
+		"_postman_id": "7da925b6-4b79-7753-6ac2-bc1eab8f8ec3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Room",
+			"request": {
+				"url": "localhost:3000/room/new",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "My room",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "That's my testing room",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "All Rooms",
+			"request": {
+				"url": "localhost:3000/room/all",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get specific room",
+			"request": {
+				"url": "localhost:3000/room/Z28WELT/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create a question into the room",
+			"request": {
+				"url": "localhost:3000/room/Z28WELT/questions/new",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "question",
+							"value": "My new question",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "That's the description of my new question",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get specific room questions",
+			"request": {
+				"url": "localhost:3000/room/Z28WELT/questions/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
