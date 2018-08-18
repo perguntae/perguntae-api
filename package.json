@@ -23,7 +23,6 @@
     "mongoose": "^4.10.5",
     "morgan": "^1.9.0",
     "pm2": "^2.4.5",
-    "rethinkdb": "^2.3.3",
     "shorthash": "0.0.2",
     "yaqrcode": "^0.2.1"
   },
