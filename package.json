@@ -4,7 +4,8 @@
   "description": "The Perguntaê project base API",
   "main": "dist/index.js",
   "scripts": {
-    "start": "babel-node ./lib/index.js",
+    "start": "babel lib -d dist --source-maps && cd dist && node index.js",
+    "dev": "babel-node ./lib/index.js",
     "start:debug": "babel-node --inspect ./lib/index.js",
     "test": "mocha --compilers js:babel-register",
     "apidoc": "apidoc -i lib/ -o apidoc/ -e node_modules/",
